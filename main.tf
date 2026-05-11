@@ -3,11 +3,6 @@ locals {
   prefix = "${var.project}-${local.env}"
 }
 
-# Random prefix for resource naming
-resource "random_id" "prefix" {
-  byte_length = 4
-}
-
 # Random suffix for globally-unique resource names
 resource "random_id" "suffix" {
   byte_length = 4
