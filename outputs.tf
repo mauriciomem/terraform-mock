@@ -3,6 +3,11 @@ output "instance_name" {
   value       = random_pet.instance_name.id
 }
 
+output "resource_prefix" {
+  description = "Random hex prefix prepended to resource names."
+  value       = random_id.prefix.hex
+}
+
 output "resource_suffix" {
   description = "Random hex suffix appended to globally-unique resource names."
   value       = random_id.suffix.hex
